@@ -1,0 +1,28 @@
+{
+  "name": "stream-nation",
+  "version": "1.0.0",
+  "description": "One stop for all streaming related services for a streamer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikit-Singh/stream-nation.git"
+  },
+  "keywords": [
+    "stream",
+    "streamer",
+    "services",
+    "course",
+    "shop",
+    "logo",
+    "layovers"
+  ],
+  "author": "multiple",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nikit-Singh/stream-nation/issues"
+  },
+  "homepage": "https://github.com/Nikit-Singh/stream-nation#readme"
+}
