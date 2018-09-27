@@ -1,5 +1,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+const path = require('path');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const flash = require('connect-flash');
@@ -25,6 +26,10 @@ app.set('view engine', 'handlebars');
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+
+// Static Folder For Express
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Method Override Middleware
