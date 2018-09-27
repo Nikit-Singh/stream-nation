@@ -10,8 +10,8 @@ const app = express();
 
 
 // Connect to mongoose
-mongoose.connect('mongodb://localhost/vidjot-dev', { useNewUrlParser: true })
-    .then(() => console.log('MongoDB Connected...'))
+mongoose.connect('mongodb://localhost/stream-nation', { useNewUrlParser: true })
+    .then(() => console.log('Connected with MongoDB.'))
     .catch(err => console.log(err));
 
 
@@ -41,3 +41,17 @@ app.use(session({
 
 // Connect-Flash Middleware
 app.use(flash());
+
+
+// Index Page
+app.get('/', (req, res) => {
+    res.render('index');
+});
+
+
+// Setting and Starting the Server
+const port = process.env.PORT | 3000;
+
+app.listen(port, () => {
+    console.log(`Server started at localhost:${port}`);
+});
