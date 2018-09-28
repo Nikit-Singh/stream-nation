@@ -5,6 +5,32 @@ body {
 .btn-success{
   background-color:#00ff88;
 }
+
+.display-3 {
+  font-weight: 600;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+					0px 8px 13px rgba(0,0,0,0.1),
+						0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.lead {
+  font-weight: 600;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+  0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.btn-dark{
+  background-color:#131416;
+  box-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+					0px 6px 9px rgba(0,0,0,0.1),
+						0px 10px 13px rgba(0,0,0,0.1);
+}
+
+.btn{
+  border:none;
+  border-radius: 0%;
+}
 .navbar .nav-link {
   font-size: 14px;
   text-transform: uppercase;
@@ -20,13 +46,13 @@ body {
   height: 600px;
 }
 
-.carousel-image-1 {
+.carousel-image-2 {
   background: url('../img/1.jpg');
   background-size: cover;
 }
 
-.carousel-image-2 {
-  background: url('../img/2.jpg');
+.carousel-image-1 {
+  background: url('../img/4.jpg');
   background-size: cover;
 }
 
@@ -38,7 +64,7 @@ body {
 #home-heading {
   position: relative;
   min-height: 500px;
-  background: url('../img/4.jpg');
+  background: url('../img/2.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   text-align: center;
