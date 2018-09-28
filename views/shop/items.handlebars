@@ -1,0 +1,9 @@
+{{#each items}}
+    <div class="card card-body mb-2">
+        <h4>{{name}}</h4>
+        <p>{{price}}</p>
+        <a href="{{link}}" class="btn btn-success btn-block">Buy Now</a>
+    </div>
+{{else}}
+    <p>No Items Listed In Shop Yet</p>
+{{/each}}

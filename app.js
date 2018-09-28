@@ -1,6 +1,6 @@
 const express = require('express');
-const exphbs = require('express-handlebars');
 const path = require('path');
+const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const flash = require('connect-flash');
@@ -8,6 +8,11 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 
 const app = express();
+
+
+//Load Routes
+const shop = require('./routes/shop');
+const users = require('./routes/users');
 
 
 // Connect to mongoose
@@ -48,10 +53,33 @@ app.use(session({
 app.use(flash());
 
 
+// Global Variable
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
+    next();
+});
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 // Index Page
 app.get('/', (req, res) => {
     res.render('index');
 });
+
+
+// FAQ Page
+app.get('/faq', (req, res) => {
+    res.render('faq');
+});
+
+
+// Use Routes
+app.use('/shop', shop);
+// app.use('/users', users);
 
 
 // Setting and Starting the Server
