@@ -43,7 +43,7 @@ body {
 }
 
 .carousel-item {
-  height: 600px;
+  height: 100vh;
 }
 
 .carousel-image-2 {
