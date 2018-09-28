@@ -71,8 +71,14 @@ body {
   color: #fff;
 }
 .textparallax  {
-    margin:10% auto;
- }
+  margin:10% auto;
+}
+
+.textparallaxservices  {
+  margin-top: 40%;
+}
+
+
 .dark-overlay {
   position: absolute;
   top: 0;
@@ -98,11 +104,14 @@ body {
 }
 
 #page-header {
-  height: 200px;
-  background: url('../img/image1.jpg');
-  background-position: 0 -360px;
+  height: 100vh;
+  background: url('../img/5.jpg');
+  background-position: relative;
+  position: 
+  background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
+  background-position: center;
   border-bottom: 1px #eee solid;
   padding-top: 50px;
 }
@@ -137,4 +146,14 @@ body {
 
 .bg-dark  {
   background-color: #131416!important;
+}
+.bg-success {
+  background-color: #05c46b!important;
+}
+.card-footer {
+  background-color: #05c46b;
+}
+
+.text-muted {
+  color: #ffff!important;
 }
