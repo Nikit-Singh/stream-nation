@@ -37,14 +37,16 @@ body {
 
 #home-heading {
   position: relative;
-  min-height: 200px;
-  background: url('../img/lights.jpg');
+  min-height: 500px;
+  background: url('../img/4.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   text-align: center;
   color: #fff;
 }
-
+.textparallax  {
+    margin:10% auto;
+ }
 .dark-overlay {
   position: absolute;
   top: 0;
@@ -102,4 +104,11 @@ body {
   color: #fff;
 }
 
+#home-icons{
+  background: #131416;
+  color:#0be881;
+}
 
+.bg-dark  {
+  background-color: #131416!important;
+}
