@@ -13,6 +13,7 @@ const app = express();
 //Load Routes
 const shop = require('./routes/shop');
 const users = require('./routes/users');
+const videos = require('./routes/videos');
 
 
 // Connect to mongoose
@@ -79,6 +80,7 @@ app.get('/faq', (req, res) => {
 
 // Use Routes
 app.use('/shop', shop);
+app.use('/videos', videos);
 // app.use('/users', users);
 
 
