@@ -1,39 +1,41 @@
 {
-    "name": "stream-nation",
-    "version": "1.0.0",
-    "description": "One stop for all streaming related services for a streamer",
-    "main": "app.js",
-    "scripts": {
-        "start": "nodemon app"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Nikit-Singh/stream-nation.git"
-    },
-    "keywords": [
-        "stream",
-        "streamer",
-        "services",
-        "course",
-        "shop",
-        "logo",
-        "layovers"
-    ],
-    "author": "multiple",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Nikit-Singh/stream-nation/issues"
-    },
-    "homepage": "https://github.com/Nikit-Singh/stream-nation#readme",
-    "dependencies": {
-        "body-parser": "^1.18.3",
-        "connect-flash": "^0.1.1",
-        "express": "^4.16.3",
-        "express-handlebars": "^3.0.0",
-        "express-session": "^1.15.6",
-        "jump.js": "^1.0.2",
-        "method-override": "^3.0.0",
-        "mongoose": "^5.2.17",
-        "passport": "^0.4.0"
-    }
+  "name": "stream-nation",
+  "version": "1.0.0",
+  "description": "One stop for all streaming related services for a streamer",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikit-Singh/stream-nation.git"
+  },
+  "keywords": [
+    "stream",
+    "streamer",
+    "services",
+    "course",
+    "shop",
+    "logo",
+    "layovers"
+  ],
+  "author": "multiple",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nikit-Singh/stream-nation/issues"
+  },
+  "homepage": "https://github.com/Nikit-Singh/stream-nation#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "jump.js": "^1.0.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.2.17",
+    "passport": "^0.4.0",
+    "stripe": "^6.12.1"
+  },
+  "devDependencies": {}
 }
