@@ -129,6 +129,20 @@ body {
   padding-top: 50px;
   font-size:1.4em;
 }
+
+#page-header-services2 {
+  height: 100vh;
+  background: url('../img/7.jpg');
+  background-position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  background-position: center;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px;
+  font-size:1.4em;
+}
+
 .about-img {
   margin-top: -50px;
 }
@@ -212,3 +226,8 @@ body {
   background-color:#131416;
   border:10px solid #05c46b;
 }
+.card-logo {
+  background-color:#131416;
+  border:2px solid #05c46b;
+}
+

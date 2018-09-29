@@ -111,6 +111,16 @@ body {
     padding-top: 50px;
 }
 
+<<<<<<< HEAD
+#page-header {
+    height: 200px;
+    background: url('../img/image1.jpg');
+    background-position: 0 -360px;
+    background-attachment: fixed;
+    color: #fff;
+    border-bottom: 1px #eee solid;
+    padding-top: 50px;
+=======
 #page-header-dashboard {
     height: 100vh;
     background: url('../img/6.jpg');
@@ -122,6 +132,7 @@ body {
     border-bottom: 1px #eee solid;
     padding-top: 50px;
     font-size: 1.4em;
+>>>>>>> 8e1869b1076d68934b0effa47edef3587b893c1d
 }
 
 .about-img {
@@ -137,7 +148,6 @@ body {
     text-decoration: none;
 }
 
-#faq .card-body,
 #faq .card-header {
     background: #333;
 }
