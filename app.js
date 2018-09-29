@@ -67,9 +67,13 @@ app.use((req, res, next) => {
 
 
 // Index Page
-app.get('/', (req, res) => {
-    res.render('index');
-});
+// app.get('/', (req, res) => {
+//     res.render('index');
+// });
+
+// app.get('/', (req, res) => {
+//     res.render('index2');
+// });
 
 
 // FAQ Page
@@ -113,7 +117,7 @@ app.post('/charge', (req, res) => {
     console.log(req.body);
     res.send('Test')
 })
-
+// });
 // Setting and Starting the Server
 const port = process.env.PORT | 3000;
 
