@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="background: #131416;">
     <div class="container">
         <a href="/" class="navbar-brand" style="color:#0be881">Stream Nation</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -6,28 +6,28 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
             <a href="/" class="nav-link" style="color:#0be881">Home</a>      
-            </li>
-            <li class="nav-item">
-            <a href="/services" class="nav-link" style="color:#0be881">Services</a>
-            </li>
-            <li class="nav-item">
-            <a href="/support" class="nav-link" style="color:#0be881">Customer Care</a>
-            </li>
-            <li class="nav-item">
-            <a href="/shop" class="nav-link" style="color:#0be881">Shop Accessories</a>
-            </li>
-            <li class="nav-item">
-            <li class="nav-item">
-            <a href="/shop/add" class="nav-link" style="color:#0be881">Add Items</a>
             </li>
             <li class="nav-item">
             <a href="/blog" class="nav-link" style="color:#0be881">Blog</a>
             </li>
+            
+            {{#if user}}
             <li class="nav-item">
-            <a href="/faq" class="nav-link" style="color:#0be881">FAQ</a>
+            <a href="/shop" class="nav-link" style="color:#0be881">Shop</a>
             </li>
+            <li class="nav-item">
+            <a href="/videos/playlist" class="nav-link" style="color:#0be881">Course</a>
+            </li>
+            <li class="nav-item">
+                <a href="/users/logout" class="nav-link" style="color:#0be881">LOGOUT</a>
+            </li>
+            {{else}}
+            <li class="nav-item">
+                <a href="/services" class="nav-link" style="color:#0be881">Services</a>
+            </li>
+            {{/if}}
         </ul>
         </div>
     </div>

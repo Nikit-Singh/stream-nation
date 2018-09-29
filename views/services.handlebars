@@ -1,3 +1,11 @@
+<head>
+  <style>
+    body{
+      background: #131416;
+    }
+  </style>
+</head>
+
 <!-- PAGE HEADER -->
   <header id="page-header">
     <div class="container">
@@ -20,8 +28,8 @@
               <h3>Premium Pack</h3>
             </div>
             <div class="card-body">
-              <h4 class="card-title">$199.99/Year</h4>
-              <p class="card-text">Subscribe for premium pack if you want to avail all services we offer.</p>
+              <h4 class="card-title" style="color: white;">$199.99/Year</h4>
+              <p class="card-text" style="color: white;">Subscribe for premium pack if you want to avail all services we offer.</p>
               <ul class="list-group">
                 <li class="list-group-item">
                   <i class="fas fa-check"></i> Full Course tutorials from scratch.
@@ -41,13 +49,13 @@
               </ul>
               <form action="/charge" method="POST">
                 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_pqqsiKvR4uSvPDPTlfMc9uyE"
-                    data-amount="2500" data-name="Services" data-description="Services by Stream-nation" data-locale="auto">
+                    data-amount="19999" data-name="Services" data-description="Services by Stream-nation" data-locale="auto">
             
                 </script>
                 <script>
                     document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
                             </script>
-                <button type="submit" class="btn btn-dark btn-block mt-2">
+                <button type="submit" class="btn btn-success btn-block mt-2">
                     Get It
                             </button>
             </form>
@@ -63,8 +71,8 @@
               <h3>Normal Pack</h3>
             </div>
             <div class="card-body">
-              <h4 class="card-title">$99.99/Year</h4>
-              <p class="card-text">Subscribe for a normal pack if you want to avail intermediate level features.</p>
+              <h4 class="card-title" style="color: white;">$99.99/Year</h4>
+              <p class="card-text" style="color: white;">Subscribe for a normal pack if you want to avail intermediate level features.</p>
               <ul class="list-group">
                 <li class="list-group-item">
                   <i class="fas fa-check"></i> Monthly access to private streams of professional streamers.
@@ -84,13 +92,13 @@
               </ul>
               <form action="/charge" method="POST">
                 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_pqqsiKvR4uSvPDPTlfMc9uyE"
-                  data-amount="19999" data-name="Services" data-description="Services by Stream-nation" data-locale="auto">
+                  data-amount="9999" data-name="Services" data-description="Services by Stream-nation" data-locale="auto">
                   
                 </script>
                 <script>
                     document.getElementsByClassName('stripe-button-el')[1].style.display = 'none';
                 </script>
-                <button type="submit" class="btn btn-dark btn-block mt-2">
+                <button type="submit" class="btn btn-success btn-block mt-2">
                     Get It
                 </button>
               </form>
@@ -106,8 +114,8 @@
               <h3>Free Pack</h3>
             </div>
             <div class="card-body">
-              <h4 class="card-title">$0</h4>
-              <p class="card-text">Subscribe for a free pack if you are here for minor improvements to your channel.</p>
+              <h4 class="card-title" style="color: white;">Free</h4>
+              <p class="card-text" style="color: white;">Subscribe for a free pack if you are here for minor improvements to your channel.</p>
               <ul class="list-group">
                 <li class="list-group-item">
                   <i class="fas fa-check"></i> Interact with freelancers to build your streaming brand.
@@ -125,17 +133,9 @@
                   <i class="fas fa-check"></i> Get latest tips on promoting your streams.
                 </li>
               </ul>
-              <form action="/charge" method="POST">
-                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_pqqsiKvR4uSvPDPTlfMc9uyE"
-                  data-amount="9999" data-name="Services" data-description="Services by Stream-nation" data-locale="auto">
-                </script>
-                <script>
-                    document.getElementsByClassName('stripe-button-el')[2].style.display = 'none';
-                </script>
-                <button type="submit" class="btn btn-dark btn-block mt-2">
+                <a href="/dashboard" type="submit" class="btn btn-success btn-block mt-2">
                     Get It
-                </button>
-              </form>
+                </a>
             </div>
             <div class="card-footer text-muted">
               1 Year Plan

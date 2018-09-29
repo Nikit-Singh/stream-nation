@@ -6,7 +6,7 @@
     }
     .card  {
         padding: 10px;
-
+        border-radius: 0;
         background: #131416;
     }
     .btn-block {
@@ -17,16 +17,22 @@
 <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
 
 </head>
-<div class="card card-body">
-    <h2 class="text-center">List Of Videos</h2>
-    {{#each videos}}
-        <form action="/videos/playlist/mainvideo" method="get">
-            <center>
-            <input type="hidden" name="link" value="{{link}}">
-            <input type="submit" style="margin:10px" class="btn btn-success btn-block lg-2" name="video" value="{{video}}">
-            </center>
-        </form>
-    {{else}}
-     <p>No Videos Yet</p>
-    {{/each}}
+
+<div class="container">
+    <div class="card card-body">
+        <h2 class="text-center">List Of Videos</h2>
+        {{#each videos}}
+            <form action="/videos/playlist/mainvideo" method="get">
+                <center>
+                <input type="hidden" name="link" value="{{link}}">
+                <input type="submit" style="margin:10px" class="btn btn-success btn-block lg-2" name="video" value="{{video}}">
+                </center>
+            </form>
+        {{else}}
+        <br>
+        <br>
+        <h4 class="text-center" style="margin-top: 20px">No Videos Yet</h4>
+        {{/each}}
+    </div>
+    
 </div>

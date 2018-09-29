@@ -18,7 +18,7 @@ router.get('/login', (req, res) => {
 // Login Form Post
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
-        successRedirect: '/dashboard',
+        successRedirect: '/services',
         failureRedirect: '/users/login',
         failureFlash: true
     })(req, res, next);
@@ -48,7 +48,6 @@ router.post('/register', (req, res) => {
             email: req.body.email,
             password: req.body.password,
             password2: req.body.password2,
-            accountType: ''
         });
     } else {
         User.findOne({ email: req.body.email })
@@ -89,7 +88,7 @@ router.post('/register', (req, res) => {
 router.get('/logout', (req, res) => {
     req.logout();
     req.flash('success_msg', 'Successfully Logged Out');
-    res.redirect('/users/login');
+    res.redirect('/');
 });
 
 module.exports = router;

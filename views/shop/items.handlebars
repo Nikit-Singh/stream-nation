@@ -9,7 +9,7 @@
         width: 50%;
         font-family: 'Catamaran';
         text-transform: uppercase;
-        padding: 20px autopi;
+        padding: 20px auto;
         margin-bottom: 10px;
     }
     #priceval {
@@ -30,14 +30,17 @@
 <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
 
 </head>
-{{#each items}}
-    <div class="card card-body mb-2 mx-auto" id="card_item">
-        <h2 id="priceval">{{name}}</h2>
-        <nobr>
-        <span id="priceval">${{price}}</span>
-        <a href="{{link}}" class="btn btn-success btn-md" style="float:right"><span id="buttonbuynow">Buy Now</span></a>
-        </nobr>
-    </div>
-{{else}}
-    <p>No Items Listed In Shop Yet</p>
-{{/each}}
+
+<div class="container">
+    {{#each items}}
+        <div class="card card-body mb-2 mx-auto" id="card_item">
+            <h2 id="priceval">{{name}}</h2>
+            <nobr>
+            <span id="priceval">${{price}}</span>
+            <a href="{{link}}" class="btn btn-success btn-md" style="float:right"><span id="buttonbuynow">Buy Now</span></a>
+            </nobr>
+        </div>
+    {{else}}
+        <p>No Items Listed In Shop Yet</p>
+    {{/each}}
+</div>
