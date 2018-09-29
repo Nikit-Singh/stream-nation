@@ -3,18 +3,41 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
+const passport = require('passport');
+const { ensureAuthenticated } = require('./helpers/auth');
+
 
 const app = express();
+
+
+
+// Load User Model
+require('./models/User');
+
+
+// Passport Config
+require('./config/passport')(passport);
 
 
 //Load Routes
 const shop = require('./routes/shop');
 const users = require('./routes/users');
 const videos = require('./routes/videos');
+// const auth = require('./routes/auth');
+// const keys = require('./config/keys');
 
+
+// Express-Session Middleware
+app.use(bodyParser());
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+}));
 
 // Connect to mongoose
 mongoose.connect('mongodb://localhost/stream-nation', { useNewUrlParser: true })
@@ -42,14 +65,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 
-// Express-Session Middleware
-app.use(session({
-    secret: 'secret',
-    resave: true,
-    saveUninitialized: true
-}));
-
-
 // Connect-Flash Middleware
 app.use(flash());
 
@@ -59,6 +74,7 @@ app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
     res.locals.error = req.flash('error');
+    res.locals.user = req.user || null;
     next();
 });
 
@@ -78,14 +94,26 @@ app.get('/faq', (req, res) => {
 });
 
 
+app.get('/dashboard', (req, res) => {
+    res.render('dashboard')
+});
+
+
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 // Use Routes
 app.use('/shop', shop);
 app.use('/videos', videos);
-// app.use('/users', users);
+// app.use('/auth', auth);
+app.use('/users', users);
 
 
 // Setting and Starting the Server
-const port = process.env.PORT | 3000;
+const port = process.env.PORT || 3000;
+
 
 app.listen(port, () => {
     console.log(`Server started at localhost:${port}`);
