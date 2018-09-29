@@ -83,6 +83,36 @@ app.use('/shop', shop);
 app.use('/videos', videos);
 // app.use('/users', users);
 
+//API Key
+
+app.get('/', (req, res) => {
+    res.render('index', {
+        stripePublishableKey : "pk_test_pqqsiKvR4uSvPDPTlfMc9uyE"
+    });
+});
+
+//Stripe charge for payment.
+//Charge route
+// app.post('/charge', (req, res) => {
+//     const amount = 2500;
+    
+//     stripe.customers.create({
+//         email: req.body.stripeEmail,
+//         source: req.body.stripeToken
+//     })
+//     .then(customer => stripe.charges.create({
+//         amount,
+//         description: "Services",
+//         currency: "USD",
+//         customer: customer.id
+//     }))
+//     .then(charge => res.render('success'));
+// });
+app.post('/charge', (req, res) => {
+    const amount = 2500;
+    console.log(req.body);
+    res.send('Test')
+})
 
 // Setting and Starting the Server
 const port = process.env.PORT | 3000;
