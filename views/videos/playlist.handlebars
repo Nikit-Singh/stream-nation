@@ -1,10 +1,32 @@
-<h2>List Of Videos</h2>
+<head>
+<style>
+    body {
+        background: #05c46b;
+        color:#05c46b;
+    }
+    .card  {
+        padding: 10px;
 
-{{#each videos}}
-    <form action="/videos/playlist/mainvideo" method="get">
-        <input type="hidden" name="link" value="{{link}}">
-        <input type="submit" class="btn btn-success btn-block mb-2" name="video" value="{{video}}">
-    </form>
-{{else}}
-    <p>No Videos Yet</p>
-{{/each}}
+        background: #131416;
+    }
+    .btn-block {
+        border-radius:0px;
+        width:90%!important;
+    }
+</style>
+<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+
+</head>
+<div class="card card-body">
+    <h2 class="text-center">List Of Videos</h2>
+    {{#each videos}}
+        <form action="/videos/playlist/mainvideo" method="get">
+            <center>
+            <input type="hidden" name="link" value="{{link}}">
+            <input type="submit" style="margin:10px" class="btn btn-success btn-block lg-2" name="video" value="{{video}}">
+            </center>
+        </form>
+    {{else}}
+     <p>No Videos Yet</p>
+    {{/each}}
+</div>
