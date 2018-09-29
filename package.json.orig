@@ -4,7 +4,7 @@
     "description": "One stop for all streaming related services for a streamer",
     "main": "app.js",
     "scripts": {
-
+        "start": "nodemon app"
     },
     "repository": {
         "type": "git",
