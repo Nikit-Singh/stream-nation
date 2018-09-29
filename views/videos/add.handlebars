@@ -1,5 +1,28 @@
+<style>
+  body {
+        background: #05c46b;
+        font-family: 'Catamaran';
+
+    }
+    .card {
+      background: #131416;
+      font-size:1.4em;
+        color: #05c46b;
+    }
+    input {
+      background-color:#131416!important;
+      border:1px solid #05c46b!important;
+      border-radius:0!important;
+      color:#ffffff!important;
+    }
+    .btn {
+      border-radius:0;
+    }
+</style>
+<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+</head>
 <div class="card card-body">
-  <h3>Add Videos</h3>
+  <h3 class="text-center">Add Videos</h3>
   <form action="/videos" method="post">
     <div class="form-group">
       <label for="video">Video Title</label>
@@ -11,7 +34,7 @@
       <input type="text" class="form-control" name="link" required>
     </div>
     
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success btn-block">Submit</button>
     
   </form>
 </div>
