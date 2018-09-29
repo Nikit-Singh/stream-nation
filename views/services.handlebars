@@ -1,0 +1,147 @@
+<!-- PAGE HEADER -->
+  <header id="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 m-auto text-center">
+          <h1 class="textparallaxservices">Our Services</h1>
+          <p>Choose from the services mentioned according to your preference</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header bg-success text-white">
+              <h3>Premium Pack</h3>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">$199.99/Year</h4>
+              <p class="card-text">Subscribe for premium pack if you want to avail all services we offer.</p>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> Full Course tutorials from scratch.
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> Weekly access to private live streams of pro streamers
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> Interact with professional streamers
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> Fastest customer care support
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i>24x7 Chat Service
+                </li>
+              </ul>
+              <form action="/charge" method="POST">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_pqqsiKvR4uSvPDPTlfMc9uyE"
+                    data-amount="2500" data-name="Services" data-description="Services by Stream-nation" data-locale="auto">
+            
+                </script>
+                <script>
+                    document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+                            </script>
+                <button type="submit" class="btn btn-dark btn-block mt-2">
+                    Get It
+                            </button>
+            </form>
+            </div>
+            <div class="card-footer text-muted">
+              1 Year Plan
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header bg-success text-white">
+              <h3>Normal Pack</h3>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">$99.99/Year</h4>
+              <p class="card-text">Subscribe for a normal pack if you want to avail intermediate level features.</p>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> Monthly access to private streams of professional streamers.
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> 24x7 customer care support.
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> 24x7 Chat Service
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i>Access featured accessories.
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> Access to private discord channels.
+                </li>
+              </ul>
+              <form action="/charge" method="POST">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_pqqsiKvR4uSvPDPTlfMc9uyE"
+                  data-amount="19999" data-name="Services" data-description="Services by Stream-nation" data-locale="auto">
+                  
+                </script>
+                <script>
+                    document.getElementsByClassName('stripe-button-el')[1].style.display = 'none';
+                </script>
+                <button type="submit" class="btn btn-dark btn-block mt-2">
+                    Get It
+                </button>
+              </form>
+            </div>
+            <div class="card-footer text-muted">
+              1 Year Plan
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header bg-success text-white">
+              <h3>Free Pack</h3>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">$0</h4>
+              <p class="card-text">Subscribe for a free pack if you are here for minor improvements to your channel.</p>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> Interact with freelancers to build your streaming brand.
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> Access required accessories.
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> Customer care support.
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> Interact with streamers in our public blog.
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-check"></i> Get latest tips on promoting your streams.
+                </li>
+              </ul>
+              <form action="/charge" method="POST">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_pqqsiKvR4uSvPDPTlfMc9uyE"
+                  data-amount="9999" data-name="Services" data-description="Services by Stream-nation" data-locale="auto">
+                </script>
+                <script>
+                    document.getElementsByClassName('stripe-button-el')[2].style.display = 'none';
+                </script>
+                <button type="submit" class="btn btn-dark btn-block mt-2">
+                    Get It
+                </button>
+              </form>
+            </div>
+            <div class="card-footer text-muted">
+              1 Year Plan
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -103,6 +103,11 @@ app.get('/dashboard', (req, res) => {
 });
 
 
+app.get('/services', (req, res) => {
+    res.render('services')
+});
+
+
 // Passport Middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -118,7 +123,7 @@ app.use('/users', users);
 
 app.get('/', (req, res) => {
     res.render('index', {
-        stripePublishableKey : "pk_test_pqqsiKvR4uSvPDPTlfMc9uyE"
+        stripePublishableKey: "pk_test_pqqsiKvR4uSvPDPTlfMc9uyE"
     });
 });
 
@@ -126,7 +131,7 @@ app.get('/', (req, res) => {
 //Charge route
 // app.post('/charge', (req, res) => {
 //     const amount = 2500;
-    
+
 //     stripe.customers.create({
 //         email: req.body.stripeEmail,
 //         source: req.body.stripeToken
@@ -140,12 +145,12 @@ app.get('/', (req, res) => {
 //     .then(charge => res.render('success'));
 // });
 app.post('/charge', (req, res) => {
-    const amount = 2500;
-    console.log(req.body);
-    res.send('Test')
-})
-// });
-// Setting and Starting the Server
+        const amount = 2500;
+        console.log(req.body);
+        res.send('Test')
+    })
+    // });
+    // Setting and Starting the Server
 const port = process.env.PORT || 3000;
 
 
