@@ -1,8 +1,41 @@
+<head>
+<style>
+    body {
+        background: #05c46b;
+    }
+    #card_item {
+        background: #131416;
+        color: #05c46b;
+        width: 50%;
+        font-family: 'Catamaran';
+        text-transform: uppercase;
+        padding: 20px;
+    }
+    #priceval {
+        font-weight:700;
+        font-size:2em;
+        float: left;
+    }
+    .btn-success {
+        color:#131416;
+        border-radius: 0%;
+    }
+    #buttonbuynow {
+        font-family: 'Catamaran';
+        font-weight: 600;
+        font-size:1.5em;
+    }
+</style>
+<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+
+</head>
 {{#each items}}
-    <div class="card card-body mb-2">
-        <h4>{{name}}</h4>
-        <p>{{price}}</p>
-        <a href="{{link}}" class="btn btn-success btn-block">Buy Now</a>
+    <div class="card card-body mb-2 mx-auto" id="card_item">
+        <h2 id="priceval">{{name}}</h2>
+        <nobr>
+        <span id="priceval">${{price}}</span>
+        <a href="{{link}}" class="btn btn-success btn-md" style="float:right"><span id="buttonbuynow">Buy Now</span></a>
+        </nobr>
     </div>
 {{else}}
     <p>No Items Listed In Shop Yet</p>

@@ -3,7 +3,7 @@ body {
 }
 
 .btn-success{
-  background-color:#00ff88;
+  background-color:#05c46b;
 }
 
 .display-3 {
@@ -62,6 +62,7 @@ body {
 }
 
 #home-heading {
+  height: 90vh;
   position: relative;
   min-height: 500px;
   background: url('../img/2.jpg');
@@ -71,7 +72,7 @@ body {
   color: #fff;
 }
 .textparallax  {
-  margin:10% auto;
+  margin:15% auto;
 }
 
 .textparallaxservices  {
@@ -140,6 +141,8 @@ body {
 }
 
 #home-icons{
+  margin: 0%;
+  height:100vh;
   background: #131416;
   color:#0be881;
 }
@@ -157,3 +160,10 @@ body {
 .text-muted {
   color: #ffff!important;
 }
+
+.hrdisp
+{
+  width: inherit;
+  background: #0be881;
+}
+
