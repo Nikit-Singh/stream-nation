@@ -103,6 +103,11 @@ app.get('/dashboard', (req, res) => {
 });
 
 
+app.get('/services', (req, res) => {
+    res.render('services')
+});
+
+
 // Passport Middleware
 app.use(passport.initialize());
 app.use(passport.session());
