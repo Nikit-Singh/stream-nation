@@ -1,19 +1,19 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="background: #131416!important;">
     <div class="container">
-        <a href="/" class="navbar-brand" style="color:#0be881">Stream Nation</a>
+        <a href="#" class="navbar-brand" style="color:#0be881">Stream Nation</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-            <a href="/" class="nav-link" style="color:#0be881">Home</a>      
-            </li>
-            <li class="nav-item">
-            <a href="/blog" class="nav-link" style="color:#0be881">Blog</a>
+            <a href="https://stream-nation.herokuapp.com/" class="nav-link" style="color:#0be881">Blog</a>
             </li>
             
             {{#if user}}
+            <li class="nav-item">
+                <a href="/dashboard" class="nav-link" style="color:#0be881">Home</a>      
+            </li>
             <li class="nav-item">
             <a href="/shop" class="nav-link" style="color:#0be881">Shop</a>
             </li>
@@ -21,12 +21,22 @@
             <a href="/videos/playlist" class="nav-link" style="color:#0be881">Course</a>
             </li>
             <li class="nav-item">
+                <a href="/platform" class="nav-link" style="color:#0be881">Services</a>
+            </li>
+            <li class="nav-item">
+                <a href="/services" class="nav-link" style="color:#0be881">Plans</a>
+            </li>
+            <li class="nav-item">
                 <a href="/users/logout" class="nav-link" style="color:#0be881">LOGOUT</a>
             </li>
             {{else}}
             <li class="nav-item">
-                <a href="/services" class="nav-link" style="color:#0be881">Services</a>
+                <a href="/users/login" class="nav-link" style="color:#0be881">Login</a>
             </li>
+            <li class="nav-item">
+                <a href="/users/register" class="nav-link" style="color:#0be881">Register</a>
+            </li>
+
             {{/if}}
         </ul>
         </div>

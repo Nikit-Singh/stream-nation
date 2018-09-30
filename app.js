@@ -17,13 +17,12 @@ const app = express();
 require('./models/User');
 const User = mongoose.model('users');
 
+const db = require('./config/database');
 
 //Load Routes
 const shop = require('./routes/shop');
 const users = require('./routes/users');
 const videos = require('./routes/videos');
-// const auth = require('./routes/auth');
-// const keys = require('./config/keys');
 
 
 // Passport Config
@@ -36,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser());
 
 // Connect to mongoose
-mongoose.connect('mongodb://localhost/stream-nation', { useNewUrlParser: true })
+mongoose.connect(db.mongoURI, { useNewUrlParser: true })
     .then(() => console.log('Connected with MongoDB.'))
     .catch(err => console.log(err));
 
@@ -98,13 +97,18 @@ app.get('/dashboard', (req, res) => {
 });
 
 
-app.get('/services', (req, res) => {
-    res.render('services');
-});
+// app.get('/services', (req, res) => {
+//     res.render('services');
+// });
+
+
+app.get('/platform', ensureAuthenticated, (req, res) => {
+    res.render('graphics/add');
+})
 
 
 //API Key
-app.get('/services', (req, res) => {
+app.get('/services', ensureAuthenticated, (req, res) => {
     res.render('services', {
         stripePublishableKey: "pk_test_pqqsiKvR4uSvPDPTlfMc9uyE"
     });
@@ -112,7 +116,7 @@ app.get('/services', (req, res) => {
 
 //Stripe charge for payment.
 //Charge route
-app.post('/charge', (req, res) => {
+app.post('/charge', ensureAuthenticated, (req, res) => {
     const amount = 19999;
 
     stripe.customers.create({

@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-// const { ensureAuthenticated } = require('../helpers/auth');
+const { ensureAuthenticated } = require('../helpers/auth');
 
 const router = express.Router();
 
@@ -11,13 +11,13 @@ const Video = mongoose.model('videos');
 
 
 // Add Video Form
-router.get('/add', (req, res) => {
+router.get('/add', ensureAuthenticated, (req, res) => {
     res.render('videos/add');
 });
 
 
 // Adding Video
-router.post('/', (req, res) => {
+router.post('/', ensureAuthenticated, (req, res) => {
 
     const newUser = {
         video: req.body.video,
@@ -34,7 +34,7 @@ router.post('/', (req, res) => {
 
 
 // Course Index Page
-router.get('/playlist', (req, res) => {
+router.get('/playlist', ensureAuthenticated, (req, res) => {
     Video.find({})
         .then(videos => {
             res.render('videos/playlist', {
@@ -45,7 +45,7 @@ router.get('/playlist', (req, res) => {
 
 
 // Accessing Video
-router.get('/playlist/mainvideo', (req, res) => {
+router.get('/playlist/mainvideo', ensureAuthenticated, (req, res) => {
     res.render('videos/mainvideo', {
         video: req.query.video,
         link: req.query.link

@@ -8,7 +8,8 @@
     .card {
       background: #131416;
       font-size:1.4em;
-        color: #05c46b;
+      color: #05c46b;
+      border-radius: 0%;
     }
     input {
       background-color:#131416!important;
@@ -23,7 +24,7 @@
 <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
 </head>
 
-<div class="container">
+<div class="container" style="margin-top: 10px;">
   <div class="card card-body">
     <h3 class="text-center">Add Items</h3>
     <form action="/shop" method="post">
@@ -42,7 +43,7 @@
         <input type="text" class="form-control" name="price" required>
       </div>
       
-      <button type="submit" class="btn btn-success btn-block">Submit</button>
+      <button type="submit" class="btn btn-success btn-block" style="padding: 10px; margin-top: 40px; margin-bottom: 10px;">Submit</button>
       
     </form>
   </div>
