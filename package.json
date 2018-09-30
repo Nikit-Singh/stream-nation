@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "description": "One stop for all streaming related services for a streamer",
     "main": "app.js",
-    "scripts": {},
+    "scripts": {
+        "start": "node app.js"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Nikit-Singh/stream-nation.git"
